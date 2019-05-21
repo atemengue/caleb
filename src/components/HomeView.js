@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {
+  Animated,
   Image,
   ScrollView,
   StyleSheet,
@@ -43,12 +44,17 @@ export default class HomeView extends Component {
 
   render() {
     return (
-      <ScrollView style={styles.container}>
-        <View style={styles.methodText}>
-          <Text style={styles.textColor}>Methodes</Text>
-        </View>
-        {this.renderCard()}
-      </ScrollView>
+      <View style={{flex: 1 }}>
+        <ScrollView style={styles.container}
+          scrollEventThrottle={16}
+          contentContainerStyle={{paddingTop: 80 }}
+        >
+          {this.renderCard()}
+          </ScrollView>
+          <View style={styles.methodText}>
+           <Text style={styles.textColor}>Methodes</Text>
+          </View>
+      </View>
     );
   }
 }
@@ -59,6 +65,9 @@ const styles = StyleSheet.create({
   },
   methodText: {
     height: 80,
+    position: 'absolute',
+    left:0,
+    right: 0,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#BF8173'
