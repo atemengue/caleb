@@ -43,10 +43,10 @@ class ConnectView extends Component {
             />
           </View>
           <View style={buttonLog}>
-            <ButtonComponent
-              backgroundColors={['#3B5998', '#3B5998']}
+          <ButtonComponent
+              backgroundColors={['#ffa323', '#ffa323']}
               onPress={() => this.props.navigation.navigate('switchTwo')}
-              text='Connexion avec facebook'
+              text='Connexion'
             />
           </View>
         </View>
